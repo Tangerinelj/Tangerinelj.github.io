@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>使用Hexo框架搭建个人博客 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="前面说第一些话今天写个博客记录一下个人是如何搭建博客。虽然搭建的过程中遇到几个坑，但是通过查找资料通过解决了。使用hexo搭建个人博客很快就能用了，而且托管在github平台也不需要自己去买服务器域名和维护，一举两得，非常nice，记录了一下搭建Hexo个人博客的步骤，尽可能的写的详细一点~">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Hexo框架搭建个人博客">
+<meta property="og:url" content="http://example.com/2021/04/24/%E4%BD%BF%E7%94%A8Hexo%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="前面说第一些话今天写个博客记录一下个人是如何搭建博客。虽然搭建的过程中遇到几个坑，但是通过查找资料通过解决了。使用hexo搭建个人博客很快就能用了，而且托管在github平台也不需要自己去买服务器域名和维护，一举两得，非常nice，记录了一下搭建Hexo个人博客的步骤，尽可能的写的详细一点~">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-24_23-37-37.1ydsg1wd05y8.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-24_23-41-42.1418eplvgx40.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-23_15-54-04.7buxq7oz00w0.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-23_15-55-39.3m7laynej5s0.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-25_00-23-58.dl6nwtetkgw.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-23_17-22-41.2ye2h4z4gqc0.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-25_00-24-13.60i4pxqyw1c0.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-23_17-28-25.6mmiact3dk40.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-23_21-47-12.54wa4anq9j40.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-23_21-51-11.qrvol3id9sw.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-23_21-55-46.4udajwrgsz60.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/InkedSnipaste_2021-04-23_22-12-49_LI.3g9mnuhot6g0.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-25_18-10-03.ln29u4ysuf4.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-25_18-24-08.3nzsg9bwenu0.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-25_18-30-31.32gojgkmshk0.png">
+<meta property="article:published_time" content="2021-04-24T15:11:30.000Z">
+<meta property="article:modified_time" content="2021-04-26T15:34:29.548Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-24_23-37-37.1ydsg1wd05y8.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-使用Hexo框架搭建个人博客" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/04/24/%E4%BD%BF%E7%94%A8Hexo%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="article-date">
+  <time class="dt-published" datetime="2021-04-24T15:11:30.000Z" itemprop="datePublished">2021-04-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      使用Hexo框架搭建个人博客
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="前面说第一些话"><a href="#前面说第一些话" class="headerlink" title="前面说第一些话"></a>前面说第一些话</h3><p>今天写个博客记录一下个人是如何搭建博客。虽然搭建的过程中遇到几个坑，但是通过查找资料通过解决了。使用hexo搭建个人博客很快就能用了，而且托管在github平台也不需要自己去买服务器域名和维护，一举两得，非常nice，记录了一下搭建Hexo个人博客的步骤，尽可能的写的详细一点~</p>
+<span id="more"></span>
+
+<h3 id="准备工作步骤"><a href="#准备工作步骤" class="headerlink" title="准备工作步骤"></a>准备工作步骤</h3><p>1：环境搭建</p>
+<p>2：使用HEXO开始搭建博客</p>
+<p>3：将博客部署到github</p>
+<p>4.更换hexo博客默认主题</p>
+<h3 id="一：环境搭建"><a href="#一：环境搭建" class="headerlink" title="一：环境搭建"></a>一：环境搭建</h3><p><strong>1.1安装nodejs和npm</strong></p>
+<p>去nodejs官网下载，下载地址：<a target="_blank" rel="noopener" href="http://nodejs.org/zh-cn/%E4%B8%8B%E8%BD%BD%E5%90%8E%E9%BB%98%E8%AE%A4%E5%AE%89%E8%A3%85%E7%9B%B4%E6%8E%A5%E7%82%B9%E4%B8%8B%E4%B8%80%E6%AD%A5">http://nodejs.org/zh-cn/下载后默认安装直接点下一步</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-24_23-37-37.1ydsg1wd05y8.png" alt="Snipaste_2021-04-24_23-37-37"></p>
+<hr>
+<p>2.打开命令行工具输入此代码可看到版本号表示成功<code>node -v</code>和<code>npm -v</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-24_23-41-42.1418eplvgx40.png" alt="Snipaste_2021-04-24_23-41-42"></p>
+<hr>
+<p><strong>1.2 安装Hexo框架</strong></p>
+<p>1:Hexo官网：<a target="_blank" rel="noopener" href="https://hexo.io/">https://hexo.io/</a></p>
+<p>2:打开命令行工具输入：</p>
+<p>3:<code>npm install -g hexo-cli</code></p>
+<p>-g表示全局安装hexo-cli脚手架</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-23_15-54-04.7buxq7oz00w0.png" alt="Snipaste_2021-04-23_15-54-04"></p>
+<hr>
+<p>4: 验证是否安装成功：</p>
+<p>输入<code>hexo-v</code>出现版本号表示成功</p>
+<p><strong>1.3安装Git</strong></p>
+<p>1:Gitg官网：<a target="_blank" rel="noopener" href="http://git-scm.com/">http://git-scm.com/</a></p>
+<p>下载后直接默认安装点击下一步</p>
+<p>2：输入<code>git -version</code></p>
+<p>出现如下版本号表示成功</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-23_15-55-39.3m7laynej5s0.png" alt="Snipaste_2021-04-23_15-55-39"></p>
+<hr>
+<h3 id="二：使用HEXO开始搭建博客"><a href="#二：使用HEXO开始搭建博客" class="headerlink" title="二：使用HEXO开始搭建博客"></a>二：使用HEXO开始搭建博客</h3><p><strong>1.1进入项目文件（blog）并在该项目录下打开命令行工具</strong></p>
+<p>1：新建一个文件夹在E盘文件名为blog</p>
+<p>2：在项目文件目录打开命令行工具</p>
+<p><strong>1.2通过hexo命令初始化博客</strong></p>
+<p>1：在命令行内输入<code>hexo init</code> </p>
+<p>出现 start blogging with Hexo!  即初始化完成！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-25_00-23-58.dl6nwtetkgw.png" alt="Snipaste_2021-04-25_00-23-58"></p>
+<p>此文件下就生产项目文件：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-23_17-22-41.2ye2h4z4gqc0.png" alt="Snipaste_2021-04-23_17-22-41"></p>
+<hr>
+<p><strong>2.3 运行hexo服务预览博客</strong></p>
+<p>在命令行下输入<code>hexo s</code></p>
+<p>出现访问地址</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:<span class="comment">//localhost:4000</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-25_00-24-13.60i4pxqyw1c0.png" alt="Snipaste_2021-04-25_00-24-13"></p>
+<p>点击即可预览</p>
+<p>按住ctrl+c结束该服务</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-23_17-28-25.6mmiact3dk40.png" alt="Snipaste_2021-04-23_17-28-25"></p>
+<hr>
+<h3 id="三-将博客部署到github"><a href="#三-将博客部署到github" class="headerlink" title="三.将博客部署到github"></a>三.将博客部署到github</h3><p><strong>1.1 登录github创建仓库</strong></p>
+<p>1：新建一个仓库<br>创建一个和你用户名相同的仓库，后面加.github.io后缀，必须要同名哦，不然后面会出现页面404的情况，点击create respository按钮创建。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-23_21-47-12.54wa4anq9j40.png" alt="Snipaste_2021-04-23_21-47-12"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-23_21-51-11.qrvol3id9sw.png" alt="Snipaste_2021-04-23_21-51-11"></p>
+<p><strong>1.2 在本地项目中git部署插件</strong></p>
+<p>1：项目文件跟目录下打开命令行工具输入如下</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<p>–save表示仅在本项目中安装</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-23_21-55-46.4udajwrgsz60.png" alt="Snipaste_2021-04-23_21-55-46"></p>
+<p>2:使用GitHub账号登陆Gig</p>
+<p>这不写了可以看其他博主的教程</p>
+<p>3： 修改项目跟目录下的配置文件  _config-yml</p>
+<p>找到目录最下面的deploy: type:进行如下编辑：</p>
+<p><code>type:git                                                repo:github上创建的仓库地址        branch:main</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/InkedSnipaste_2021-04-23_22-12-49_LI.3g9mnuhot6g0.jpg" alt="InkedSnipaste_2021-04-23_22-12-49_LI"></p>
+<p>3.4 部署到Github</p>
+<p>项目跟目录下打开命令行工具输入<code>hexo d</code></p>
+<p>提示输入你的github的账号密码后将代码提交到Github仓库,通过GitHub的链接即可访问博客。</p>
+<h3 id="四-更换hexo博客默认主题"><a href="#四-更换hexo博客默认主题" class="headerlink" title="四.更换hexo博客默认主题"></a>四.更换hexo博客默认主题</h3><p><strong>1.博客主题的安装</strong><br>主题可以选择自己喜欢的，以下是以一个yilia主题为例,这个主题非常简洁所以我用的是这个，这里有很多主题可以选择，      传送门 ：          <a target="_blank" rel="noopener" href="https://hexo.io/themes/%E3%80%82%E6%AF%94%E5%A6%82%E9%80%89%E4%B8%80%E4%B8%AA%E4%B8%BB%E9%A2%98%EF%BC%9Ahttps://github.com/litten/hexo-theme-yilia%EF%BC%8C%E6%89%93%E5%BC%80%E9%93%BE%E6%8E%A5%EF%BC%8C%E8%BF%9B%E5%85%A5%E5%88%B0GitHub%E9%87%8C%E9%9D%A2%EF%BC%8C%E6%9C%89%E8%AF%A6%E7%BB%86%E7%9A%84%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E3%80%82">https://hexo.io/themes/。比如选一个主题：https://github.com/litten/hexo-theme-yilia，打开链接，进入到GitHub里面，有详细的安装教程。</a></p>
+<p>1 :将主题下载到本地项目的 themes文件夹下</p>
+<p>在githou中搜索hexo-theme</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-25_18-10-03.ln29u4ysuf4.png" alt="Snipaste_2021-04-25_18-10-03"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-25_18-24-08.3nzsg9bwenu0.png" alt="Snipaste_2021-04-25_18-24-08"></p>
+<p><strong>2：下载主题：</strong></p>
+<p>从github上克隆下载主题themes&#x2F;yilia文件夹</p>
+<p>输入此代码<code>git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</code></p>
+<p><strong>3：修改配置文件 _config.yml</strong></p>
+<p>找到  # Extensions修改  theme: yilia</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Tangerinelj/image--blog@main/Snipaste_2021-04-25_18-30-31.32gojgkmshk0.png" alt="Snipaste_2021-04-25_18-30-31"></p>
+<h4 id="主题就更换完成了，更换其他主题方法一样"><a href="#主题就更换完成了，更换其他主题方法一样" class="headerlink" title="主题就更换完成了，更换其他主题方法一样"></a>主题就更换完成了，更换其他主题方法一样</h4><p><strong>4.更新并重新部署</strong></p>
+<p><code>hexo clean </code>    清理缓存 </p>
+<p><code>hexo g</code>   解析生成</p>
+<p><code>hexo s</code>  运行hexo 服务预览博客</p>
+<p><code>hexo d</code> 部署到github</p>
+<h3 id="这样一个由Hexo框架搭建的博客就完成了"><a href="#这样一个由Hexo框架搭建的博客就完成了" class="headerlink" title="这样一个由Hexo框架搭建的博客就完成了"></a>这样一个由Hexo框架搭建的博客就完成了</h3><p>加油！！！！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/04/24/%E4%BD%BF%E7%94%A8Hexo%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-id="cl5dthtj40000kgssdqbydamz" data-title="使用Hexo框架搭建个人博客" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/05/25/%E5%9F%BA%E4%BA%8EWemos%E7%9A%84%E6%84%9F%E5%BA%94%E5%BC%80%E7%9B%96%E5%9E%83%E5%9C%BE%E6%A1%B6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          基于Wemos的感应开盖垃圾桶
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/05/25/%E5%9F%BA%E4%BA%8EWemos%E7%9A%84%E6%84%9F%E5%BA%94%E5%BC%80%E7%9B%96%E5%9E%83%E5%9C%BE%E6%A1%B6/">基于Wemos的感应开盖垃圾桶</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/24/%E4%BD%BF%E7%94%A8Hexo%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">使用Hexo框架搭建个人博客</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
